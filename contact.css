@@ -1,0 +1,413 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    font-family: "Poppins", serif;
+    box-sizing: border-box;
+    scrollbar-width: none;
+}
+
+@view-transition {
+    navigation: auto;
+}
+
+.no-scroll {
+    overflow: hidden;
+}
+
+button,a {
+    cursor: pointer;
+}
+
+li {
+    list-style: none;
+}
+
+
+nav {
+    display: flex;
+    height: 100px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+    position: relative;
+    z-index: 2;
+    color: white;
+}
+
+#side {
+    display: flex;
+    align-items: center;
+    gap: 55px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo span {
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 16px;
+    color: #262829;
+}
+
+.logo > img {
+    max-width: 37px;
+    
+}
+
+
+#tabs {
+    margin-left: auto;
+    display: flex;
+    height: 100%;
+    gap: 55px;
+}
+
+#tabs > a {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    border-bottom: 0px solid transparent;
+    transition: 300ms ease-out;
+
+}
+
+#tabs > a:hover {
+    border-bottom: 1px solid #262829
+}
+
+
+a {
+    text-decoration: none;
+    color: #262829;
+    font-size: 14px;
+}
+
+.cta {
+    display: flex;
+    gap: 40px;
+}
+
+.phone {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+button {
+    font-weight: 500;
+    padding: 20px 50px;
+    border-radius: 50px;
+    background: #262829;
+    border: none;
+    transition: 300ms ease-out;
+}
+
+.cta button a {
+    color: white;
+}
+
+button:hover {
+    background: rgba(103, 84, 226, 1);
+
+}
+
+/* section */
+
+#head {
+    display: flex;
+    height: min-content;
+    align-items: center;
+    overflow: visible;
+    padding: 18px 60px;
+    justify-content: space-between;
+    border-bottom: 1px solid #d9d9d9;
+    flex-wrap: wrap;
+}
+
+.heading {
+    font-family: "Space Grotesk";
+    font-size: 100px;
+    font-weight: 700;
+    color: rgba(37, 39, 40, 1);
+    animation: slideRight 1s forwards reverse;
+    animation-timeline: view(block 5% 5%);
+    animation-timing-function: linear;
+}
+
+#head img {
+    animation: shrink 1s forwards;
+    animation-timeline: scroll();
+    animation-timing-function: linear;
+}
+
+@keyframes shrink {
+    from {
+        scale: 1;
+    }
+
+    to {
+        scale: 0;
+    }
+}
+
+
+@keyframes slideRight {
+    from {
+        transform: translateX(5vw);
+    }
+
+    100% {
+        transform: translateX(-20vw);
+    }
+}
+
+#contact {
+    align-items: center;
+    display: flex;
+    gap: 60px;
+    height: min-content;
+    justify-content: center;
+    padding-block: 80px;
+}
+
+.left {
+    width: 600px;
+    position: relative;
+}
+
+.left p {
+    position: absolute;
+    bottom: 0;
+    padding: 25px;
+    background-color: white;
+    font-family: "Poppins";
+    font-size: 18px;
+    color: rgba(37, 39, 40, 1);
+}
+
+.left img {
+    width: 100%;
+}
+
+form {
+    display: grid;
+    gap: 30px;
+    width: 380px;
+}
+
+input,textarea {
+    width: 380px;
+    border: none;
+    resize: none;
+    border-bottom: 1px solid #D6DADC;
+    padding: 15px 5px;
+    color: #262829;
+    font-size: 16px;
+    font-family: "Poppins", "Poppins Placeholder", sans-serif;
+}
+
+
+form span {
+    font-family: "Space Grotesk";
+    font-size: 30px;
+    color: rgba(37, 39, 40, 1);
+}
+
+form button {
+    width: fit-content;
+    justify-self: end;
+    color: white;
+}
+
+form button:hover {
+    background-color: rgb(51, 51, 51, 0.85);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+footer {
+    background-color: rgb(37, 39, 40);
+    padding: 80px 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 55px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+footer > span:first-child {
+    font-family: "Space Grotesk";
+    font-size: 25px;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 1);
+}
+
+footer > span:last-child {
+    font-family: "Poppins", "Poppins Placeholder", sans-serif;
+    font-weight: 300;
+    letter-spacing: 7px;
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.5);
+    text-transform: uppercase;
+}
+
+footer button {
+    background-color: #fff;
+    gap: 12px;
+    display: flex;
+    align-items: center;
+    padding: 14.2px 35.5px;
+    font-family: "Space Grotesk", "Space Grotesk Placeholder", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+footer button:hover { 
+    color: #fff;
+}
+
+
+footer button:hover svg path{ 
+    fill: #fff
+}
+
+footer div {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#burg {
+    display: none;
+}
+
+#menu {
+    transition: transform 0.3s ease;
+    transform: translateX(200%);
+}
+
+
+@media screen and (max-width: 1419px) {
+
+    html, body {
+        overflow-x: hidden;
+    }
+
+    body {
+        position: relative;
+    }
+
+
+    #side {
+        display: none;
+    }
+
+    #burg {
+        display: flex;
+    }
+
+    #burg > button {
+        background: transparent;
+        padding: 15px 0px;
+        display: flex;
+        align-items: center;
+    }
+
+    #burg > button > img {
+        width: 40px;
+    }
+
+    .active {
+        transform: translateX(0) !important;
+    }
+
+    #menu {
+        background-color: #262829;
+        position: absolute;
+        padding: 50px 70px;
+        top: 10svh;
+        right: 5vw;
+    }
+
+    #menu > ul {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #menu button {
+        background: #fff;
+        color: #262829;
+    }
+
+    #menu button a {
+        color: inherit;
+    }
+
+}
+
+@media screen and (max-width: 800px) {
+
+    .heading {
+        animation: none;
+        font-size: 80px;
+
+    }
+
+
+    #head {
+        padding-inline: 5vw;
+        justify-content: center;
+        }
+
+    #image {
+        height: 528px;
+        left: calc(50% - 177px);
+        top: calc(50% - 264px);
+        width: 354px;
+    }
+
+    #contact {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .left {
+        width: calc(90vw);
+    }
+
+    label, input, textarea, form {
+        width: calc(90vw);
+    }
+
+
+    form button {
+        justify-self: center;
+
+    }
+
+
+
+
+}

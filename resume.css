@@ -1,0 +1,605 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    font-family: "Poppins", serif;
+    box-sizing: border-box;
+    scrollbar-width: none;
+}
+
+@view-transition {
+    navigation: auto;
+}
+
+.no-scroll {
+    overflow: hidden;
+}
+
+button,a {
+    cursor: pointer;
+}
+
+li {
+    list-style: none;
+}
+
+
+nav {
+    display: flex;
+    height: 100px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+    border-bottom: 1px solid #d9d9d9;
+    position: relative;
+    z-index: 2;
+    color: white;
+}
+
+#side {
+    display: flex;
+    align-items: center;
+    gap: 55px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo span {
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 16px;
+    color: #262829;
+}
+
+.logo > img {
+    max-width: 37px;
+    
+}
+
+
+#tabs {
+    margin-left: auto;
+    display: flex;
+    height: 100%;
+    gap: 55px;
+}
+
+#tabs > a {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    border-bottom: 0px solid transparent;
+    transition: 300ms ease-out;
+
+}
+
+#tabs > a:hover {
+    border-bottom: 1px solid #262829
+}
+
+
+a {
+    text-decoration: none;
+    color: #262829;
+    font-size: 14px;
+}
+
+.cta {
+    display: flex;
+    gap: 40px;
+}
+
+.phone {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+button {
+    font-weight: 500;
+    padding: 20px 50px;
+    border-radius: 50px;
+    background: #262829;
+    border: none;
+    transition: 300ms ease-out;
+}
+
+.cta button a {
+    color: white;
+}
+
+button:hover {
+    background: rgba(103, 84, 226, 1);
+
+}
+
+
+#head {
+    display: flex;
+    height: min-content;
+    align-items: center;
+    overflow: visible;
+    margin: 20px 100px 0;
+    justify-content: space-between;
+    border-bottom: 1px solid #d9d9d9;
+}
+
+.heading {
+    font-family: "Space Grotesk";
+    font-size: 100px;
+    font-weight: 700;
+    color: rgba(37, 39, 40, 1);
+    padding-left: 25px;
+    animation: slideRight 1s forwards reverse;
+    animation-timeline: view(block 5% 5%);
+    animation-timing-function: linear;
+}
+
+#head div {
+    animation: slideLeft 1s forwards reverse;
+    animation-timeline: view(block 5% 5%);
+    animation-timing-function: linear;
+    height: 230px;
+}
+
+
+@keyframes slideRight {
+    from {
+        transform: translateX(5vw);
+    }
+
+    100% {
+        transform: translateX(-20vw);
+    }
+}
+
+@keyframes slideLeft {
+    from {
+        transform: translateX(-5vw);
+    }
+
+    100% {
+        transform: translateX(10vw);
+    }
+}
+
+#head span {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+#head span button {
+    background-color: white;
+}
+
+#head span button:hover {
+    background-color: #6754e2;
+    color: white;
+}
+
+#resume {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    padding: 100px;
+    flex-wrap: wrap;
+}
+
+#para {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    justify-content: center;
+    max-width: 500px;
+}
+
+#para p {
+    font-family: "Space Grotesk";
+    font-size: 40px;
+    font-weight: 500;
+    color: rgba(37, 39, 40, 1);
+    animation: slideRight2 1s forwards;
+    animation-timeline: view(block 5% 5%);
+    animation-timing-function: linear;
+}
+
+@keyframes slideRight2 {
+    from {
+        transform: translateX(-5vw);
+    }
+
+    100% {
+        transform: translateX(7vw);
+    }
+}
+
+#para span {
+    display: flex;
+    gap: 15px;
+    height: 43px;
+}
+
+#buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 20px;
+}
+
+#buttons button:first-child {
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 13px 36px 0px;
+    display: flex;
+    align-items: center;
+    padding: 0 30px 0 0;
+    gap: 25px;
+}
+
+#buttons button:first-child div {
+    background-color: #6754e2;
+    display: flex;
+    align-items: center;
+    border-radius: 50%;
+    padding: 15px;
+    border: 15px solid white;
+}
+
+#buttons button:first-child p {
+
+    font-size: 25px;
+    font-weight: 500;
+    color: rgb(37, 39, 40);
+    padding: 0px 30px 0px 0px;
+}
+
+#buttons button:last-child {
+
+    background-color: #6754e2;
+
+    padding-block: 25px;
+}
+
+#buttons button:last-child a {
+    display: flex;
+    gap: 5px;
+    color: white;
+    font-size: 22px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+
+}
+
+
+
+#buttons button:last-child:hover {
+    background-color: #262829;
+    scale: 1.15;
+}
+
+
+
+#work-together {
+    padding-inline: 150px;
+    position: relative;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(239, 239, 239);
+}
+
+#work-together > div:first-child {
+    min-width: 250px;
+    width: 700px;
+    padding-bottom: 50px;
+    border-bottom: 1px solid  rgb(175, 175, 175);
+    font-family: "Space Grotesk";
+    font-size: 70px;
+    line-height: .81;
+    font-weight: 700;
+    color: rgba(37, 39, 40, 1);
+    text-align: center;
+}
+
+#work-together > div:last-of-type {
+    padding-top: 50px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
+}
+
+#work-together button {
+    background: #fff;
+    color: rgba(38, 40, 41, 1);
+    font-family: "Poppins", "Poppins Placeholder", sans-serif;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    height: min-content;
+}
+
+#work-together button:hover {
+    background: rgba(103, 84, 226, 1);
+    color: #fff;
+
+}
+
+#work-together button:last-child:hover {
+    scale: 1.1;
+    background: #fff;
+    color: rgba(38, 40, 41, 1);
+}
+
+.FA {
+    translate: -250px -150px;
+    position: absolute;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 74px;
+    padding-right: 37px;
+    rotate: -16deg;
+    transition: 300ms;
+
+}
+
+.FA:hover {
+    translate: -175px -150px;
+    scale: 0.9;
+}
+
+.FA p:first-child {
+    font-family: "Poppins";
+    font-size: 17.76px;
+    font-weight: 600;
+    color:  rgba(37, 39, 40, 1);
+}
+
+.FA p:last-child {
+    font-family: "Poppins";
+    font-size: 16.28px;
+    font-weight: 300;
+    color: rgba(95, 98, 100, 1);
+}
+
+
+.FA img {
+    width: 110px;
+}
+
+#work-together button:last-child {
+    padding: 0;
+    padding-left: 39px;
+    gap: 20px;
+    box-shadow: 0px 11.4px 31.57px 0px #0000001A;
+}
+
+
+
+#contacty {
+    display: grid;
+    padding: 20px;
+    border-radius: 50%;
+    border: 10px solid #fff;
+    box-shadow: 0px 11.4px 31.57px 0px #0000001A;
+    background-color: #6754e2;
+}
+
+#contacty svg {
+    width: 15px;
+    height: 15px;
+}
+
+#contacty svg path {
+    fill: #fff;
+}
+
+#overlay {
+    background-color: #000c;
+    inset: 0;
+    position: fixed;
+    user-select: none;
+    z-index: 5;
+}
+
+
+#image {
+    height: 676px;
+    left: calc(50% - 240px);
+    position: fixed;
+    top: calc(50% - 338px);
+    width: 480px;
+    z-index: 5;
+}
+
+#image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    object-position: center center;
+    object-fit: cover;
+    image-rendering: auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+footer {
+    background-color: rgb(37, 39, 40);
+    padding: 80px 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 55px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+footer > span:first-child {
+    font-family: "Space Grotesk";
+    font-size: 25px;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 1);
+}
+
+footer > span:last-child {
+    font-family: "Poppins", "Poppins Placeholder", sans-serif;
+    font-weight: 300;
+    letter-spacing: 7px;
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.5);
+    text-transform: uppercase;
+}
+
+footer button {
+    background-color: #fff;
+    gap: 12px;
+    display: flex;
+    align-items: center;
+    padding: 14.2px 35.5px;
+    font-family: "Space Grotesk", "Space Grotesk Placeholder", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+footer button:hover { 
+    color: #fff;
+}
+
+
+footer button:hover svg path{ 
+    fill: #fff
+}
+
+
+
+
+
+footer div {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+
+#burg {
+    display: none;
+}
+
+#menu {
+    transition: transform 0.3s ease;
+    transform: translateX(200%);
+}
+
+
+@media screen and (max-width: 1419px) {
+
+    html, body {
+        overflow-x: hidden;
+    }
+
+    body {
+        position: relative;
+    }
+
+
+    #side {
+        display: none;
+    }
+
+    #burg {
+        display: flex;
+    }
+
+    #burg > button {
+        background: transparent;
+        padding: 15px 0px;
+        display: flex;
+        align-items: center;
+    }
+
+    #burg > button > img {
+        width: 40px;
+    }
+
+    .active {
+        transform: translateX(0) !important;
+    }
+
+    #menu {
+        background-color: #262829;
+        position: absolute;
+        padding: 50px 70px;
+        top: 10svh;
+        right: 5vw;
+    }
+
+    #menu > ul {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #menu button {
+        background: #fff;
+        color: #262829;
+    }
+
+    #menu button a {
+        color: inherit;
+    }
+
+}
+
+@media screen and (max-width: 800px) {
+
+
+
+    .FA {
+        translate: 0;
+        margin: 0;
+        top: -5%;
+        left: 5%;
+    }
+
+    .heading {
+        padding: 20px 20px;
+    }
+
+    #head {
+        padding: 15px;
+    }
+
+    #image {
+        height: 528px;
+        left: calc(50% - 177px);
+        top: calc(50% - 264px);
+        width: 354px;
+    }
+}

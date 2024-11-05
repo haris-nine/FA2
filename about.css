@@ -1,0 +1,612 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    font-family: "Poppins", serif;
+    box-sizing: border-box;
+    scrollbar-width: none;
+}
+
+@view-transition {
+    navigation: auto;
+}
+
+.no-scroll {
+    overflow: hidden;
+}
+
+button,a {
+    cursor: pointer;
+}
+
+li {
+    list-style: none;
+}
+
+
+nav {
+    display: flex;
+    height: 100px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+    position: relative;
+    z-index: 2;
+    color: white;
+}
+
+#side {
+    display: flex;
+    align-items: center;
+    gap: 55px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo span {
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 16px;
+    color: #262829;
+}
+
+.logo > img {
+    max-width: 37px;
+    
+}
+
+
+#tabs {
+    margin-left: auto;
+    display: flex;
+    height: 100%;
+    gap: 55px;
+}
+
+#tabs > a {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    border-bottom: 0px solid transparent;
+    transition: 300ms ease-out;
+
+}
+
+#tabs > a:hover {
+    border-bottom: 1px solid #262829
+}
+
+
+a {
+    text-decoration: none;
+    color: #262829;
+    font-size: 14px;
+}
+
+.cta {
+    display: flex;
+    gap: 40px;
+}
+
+.phone {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+button {
+    font-weight: 500;
+    padding: 20px 50px;
+    border-radius: 50px;
+    background: #262829;
+    border: none;
+    transition: 300ms ease-out;
+}
+
+.cta button a {
+    color: white;
+}
+
+button:hover {
+    background: rgba(103, 84, 226, 1);
+
+}
+
+/* section */
+
+#head {
+    display: flex;
+    height: min-content;
+    align-items: center;
+    overflow: visible;
+    padding: 18px 60px;
+    justify-content: space-between;
+    border-bottom: 1px solid #d9d9d9;
+    flex-wrap: wrap;
+}
+
+.heading {
+    font-family: "Space Grotesk";
+    font-size: 100px;
+    font-weight: 700;
+    color: rgba(37, 39, 40, 1);
+    animation: slideRight 1s forwards reverse;
+    animation-timeline: view(block 5% 5%);
+    animation-timing-function: linear;
+}
+
+#head img {
+    animation: shrink 1s forwards;
+    animation-timeline: scroll();
+    animation-timing-function: linear;
+}
+
+@keyframes shrink {
+    from {
+        scale: 1;
+    }
+
+    to {
+        scale: -5;
+    }
+}
+
+
+@keyframes slideRight {
+    from {
+        transform: translateX(5vw);
+    }
+
+    100% {
+        transform: translateX(-20vw);
+    }
+}
+
+.intro {
+    justify-content: center;    
+    align-items: center;
+    display: flex;
+    flex: 0 0 auto;
+    gap: 76px;
+    padding: 100px;
+    flex-wrap: wrap;
+}
+
+.intro > span {
+    height: 421px;
+    position: relative;
+    width: 319px;
+    animation: slideImg 1s forwards;
+    animation-timeline: scroll();
+    animation-timing-function: linear;
+}
+
+.intro img:first-of-type {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    object-position: center center;
+    object-fit: cover;
+    image-rendering: auto;
+}
+
+@keyframes slideImg {
+    from {
+        transform: translateX(0vw);
+    }
+
+    100% {
+        transform: translateX(50vw);
+    }
+}
+
+.intro p {
+    min-width: 200px;
+}
+
+.p {
+    display: flex;
+    flex: 1 0 0px;
+    gap: 20px;
+    animation: slideP 1s forwards;
+    animation-timeline: scroll();
+    animation-timing-function: linear;
+}
+
+@keyframes slideP {
+    from {
+        transform: translateX(0vw);
+    }
+
+    100% {
+        transform: translateX(-50vw);
+    }
+}
+
+.p p:first-of-type {
+    font-family: "Space Grotesk", "Space Grotesk Placeholder", sans-serif;
+    font-size: 35px;
+    font-weight: 500;
+    line-height: 115%;
+    color: rgb(37, 39, 40);
+    flex: 1;
+}
+
+.p p:last-of-type {
+    font-family: "Poppins", "Poppins Placeholder", sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 120%;
+    color: rgb(95, 98, 100);
+    flex: 1;
+}
+
+#cards {
+    background: linear-gradient(rgb(239, 239, 239) 0%, rgba(239, 239, 239, 0) 100%);
+    display: flex;
+    flex-flow: column wrap;
+    gap: 114px;
+    height: min-content;
+    overflow: visible;
+    padding: 120px 100px;
+    align-items: center;
+}
+
+#cards h1 {
+    font-family: "Space Grotesk";
+    font-size: 60px;
+    font-weight: 700;
+    color: rgba(37, 39, 40, 1);
+}
+
+.card-container {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    row-gap: 100px;
+    flex-wrap: wrap;
+
+}
+
+.card {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.card p:first-of-type {
+    font-family: "Space Grotesk";
+    font-size: 20px;
+    font-weight: 500;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgb(196, 207, 212);
+    color: rgba(193, 197, 199, 1);
+}
+
+.card div {
+    font-family: "Space Grotesk", "Space Grotesk Placeholder", sans-serif;
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 115%;
+    color: rgb(37, 39, 40);
+}
+
+.card p:last-of-type {
+    font-family: "Poppins", "Poppins Placeholder", sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 120%;
+    color: rgb(95, 98, 100);
+}
+
+#ivan {
+    gap: 150px;
+    align-items: center;
+}
+
+#ivan > span {
+    height: 508px;
+    width: 382px;
+    animation: none;
+}
+
+#ivan .p {
+    flex-direction: column;
+    animation: none;
+}
+
+#ivan .p img {
+    height: 120px;
+    width: 113px;
+}
+
+#ivan .p p:first-of-type {
+    font-family: "Space Grotesk", "Space Grotesk Placeholder", sans-serif;
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 115%;
+    color: rgb(37, 39, 40);
+}
+
+#ivan .p span {
+    font-family: "Poppins", "Poppins Placeholder", sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    letter-spacing: 0.24em;
+    line-height: 120%;
+    text-transform: uppercase;
+}
+
+#movies {
+    background: linear-gradient(rgb(239, 239, 239) 0%, rgba(239, 239, 239, 0) 100%);
+    padding-block: 100px;
+}
+
+#movies h1 {
+    text-align: center;
+    font-family: "Space Grotesk", "Space Grotesk Placeholder", sans-serif;
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 115%;
+    color: rgb(37, 39, 40);
+}
+
+.scroller {
+    height: 600px;
+    display: grid;
+    align-items: center;
+}
+
+.scroller__inner {
+    padding-block: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.scroller[data-animated="true"] {
+    overflow: hidden;
+    mask-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 12.5%, rgb(0, 0, 0) 87.5%, rgba(0, 0, 0, 0) 100%);
+}
+
+.scroller[data-animated="true"] .scroller__inner {
+    width: max-content;
+    flex-wrap: nowrap;
+    animation: scroll 40s linear infinite;
+}
+
+
+@keyframes scroll {
+    to {
+    transform: translate(calc(-50% - 0.5rem));
+    }
+}
+
+#designs {
+    display: flex;
+    padding: 0 100px 100px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+#designs .para {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    max-width: 850px;
+}
+
+#designs .para img {
+    width: 190px;
+    height: 75px;
+}
+
+#designs h1 {
+    font-family: "Space Grotesk";
+    font-size: 40px;
+    font-weight: 500;
+    color: rgba(37, 39, 40, 1);
+}
+
+#designs p {
+    font-family: "Poppins";
+    font-size: 22px;
+    font-weight: 300;
+    color: rgba(95, 98, 100, 1);
+}
+
+#designs > img {
+    width: 590px;
+    height: 390px;
+}
+
+
+
+
+
+
+
+
+
+
+footer {
+    background-color: rgb(37, 39, 40);
+    padding: 80px 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 55px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+footer > span:first-child {
+    font-family: "Space Grotesk";
+    font-size: 25px;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 1);
+}
+
+footer > span:last-child {
+    font-family: "Poppins", "Poppins Placeholder", sans-serif;
+    font-weight: 300;
+    letter-spacing: 7px;
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.5);
+    text-transform: uppercase;
+}
+
+footer button {
+    background-color: #fff;
+    gap: 12px;
+    display: flex;
+    align-items: center;
+    padding: 14.2px 35.5px;
+    font-family: "Space Grotesk", "Space Grotesk Placeholder", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+footer button:hover { 
+    color: #fff;
+}
+
+
+footer button:hover svg path{ 
+    fill: #fff
+}
+
+
+
+
+
+footer div {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+
+#burg {
+    display: none;
+}
+
+#menu {
+    transition: transform 0.3s ease;
+    transform: translateX(200%);
+}
+
+
+@media screen and (max-width: 1419px) {
+
+    html, body {
+        overflow-x: hidden;
+    }
+
+    body {
+        position: relative;
+    }
+
+
+    #side {
+        display: none;
+    }
+
+    #burg {
+        display: flex;
+    }
+
+    #burg > button {
+        background: transparent;
+        padding: 15px 0px;
+        display: flex;
+        align-items: center;
+    }
+
+    #burg > button > img {
+        width: 40px;
+    }
+
+    .active {
+        transform: translateX(0) !important;
+    }
+
+    #menu {
+        background-color: #262829;
+        position: absolute;
+        padding: 50px 70px;
+        top: 10svh;
+        right: 5vw;
+    }
+
+    #menu > ul {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #menu button {
+        background: #fff;
+        color: #262829;
+    }
+
+    #menu button a {
+        color: inherit;
+    }
+
+    #designs {
+        padding-inline: 5vw;
+        flex-wrap: wrap;
+        gap: 40px;
+        justify-content: center;
+    }
+
+    #designs > img {
+        width: 90vw;
+    }
+
+}
+
+@media screen and (max-width: 800px) {
+
+
+    .scroller {
+        bottom: auto;
+        mask: linear-gradient(90deg, transparent, white 2%  );
+    }
+
+    .heading {
+        animation: none;
+        font-size: 80px;
+    }
+
+
+    #head {
+        padding-inline: 5vw;
+        justify-content: center;
+}
+
+        .intro {
+            padding: 10vw;
+        }
+
+    .p {
+        flex-wrap: wrap;
+    }
+
+    #cards {
+        padding: 100px 10vw;
+    }
+}

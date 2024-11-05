@@ -1,0 +1,888 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    font-family: "Poppins", serif;
+    box-sizing: border-box;
+    scrollbar-width: none;
+}
+
+@view-transition {
+    navigation: auto;
+}
+
+.no-scroll {
+    overflow: hidden;
+}
+
+a {
+    cursor: pointer;
+}
+
+
+li {
+    list-style: none;
+}
+
+
+header {
+    background: linear-gradient(153.93deg, #9CA0A3 6.26%, #959D9B 83.57%);
+    height: 100svh;
+}
+
+nav {
+    display: flex;
+    height: 11svh;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px 0 30px;
+    border-bottom: 1px solid rgba(255, 255, 255, .1);
+    position: relative;
+    z-index: 2;
+}
+
+#side {
+    display: flex;
+    align-items: center;
+    gap: 55px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo span {
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 16px;
+}
+
+.logo > img {
+    max-width: 37px;
+    
+}
+
+
+#tabs {
+    margin-left: auto;
+    display: flex;
+    height: 100%;
+    gap: 55px;
+}
+
+#tabs > a {
+    height: 11svh;
+    display: flex;
+    align-items: center;
+    border-bottom: 0px solid transparent;
+    transition: 300ms ease-out;
+
+}
+
+#tabs > a:hover {
+    border-bottom: 1px solid rgba(38, 40, 41, 1);
+}
+
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.cta {
+    display: flex;
+    gap: 40px;
+}
+
+.phone {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+button {
+    font-weight: 500;
+    padding: 20px 50px;
+    border-radius: 50px;
+    background: #262829;
+    border: none;
+    transition: 300ms ease-out;
+}
+
+button:hover {
+    background: rgba(103, 84, 226, 1);
+
+}
+
+
+
+#slider {
+    --fade-size: 20rem;
+    height: 89svh;
+    display: flex;
+    justify-content: center;
+    overflow: clip;
+}
+
+.slidey {
+    position: relative;
+
+}
+
+.slidey img {
+    height: 89svh;
+}
+
+.uiux {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 180px;
+    top: 25svh;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.02);
+    backdrop-filter: blur(4px)
+}
+
+.uiux span {
+    display: inline-block;
+    color: white;
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 41px;
+    font-weight: 700;
+    line-height: 41px;
+    animation: rotate 300ms linear 1 forwards;
+    animation-delay: calc(0.1s * var(--i));
+    rotate: 45deg;
+    opacity: 0;
+}
+
+
+@keyframes rotate {
+    20% {
+        opacity: 1;
+    }
+    50%, 100% {
+        rotate: 0deg;
+        opacity: 1;
+    }
+}
+
+.sliding.scroller {
+    position: absolute;
+    left: 0;
+    top: 75svh;
+    height: auto;
+    width: 100vw;
+}
+
+.sliding > .scroller__inner {
+    gap: 400px;
+    
+}
+
+.sliding.scroller[data-animated="true"] .scroller__inner {
+    animation: slider 40s linear infinite;
+}
+
+@keyframes slider {
+    to {
+    transform: translate(calc(-50% - 200px));
+    }
+}
+
+
+
+
+.sliding p {
+    font-family: "Space Grotesk", sans-serif;
+    flex-shrink: 0;
+    font-weight: 700;
+    font-size: 179px;
+    color: white;
+}
+
+#info-bar {
+    display: flex;
+    flex: none;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 100px 150px;
+    width: 100%;
+    z-index: 1;
+    justify-content: center;
+}
+
+#info-bar div {
+    display: flex;
+    flex: 2 0 0px;
+    flex-wrap: nowrap;
+    gap: 20px;
+}
+
+#info-bar div p:first-child {
+    font-family: "Space Grotesk", "Space Grotesk Placeholder", sans-serif;
+    font-size: 35px;
+    font-weight: 700;
+    color: rgb(37, 39, 40);
+}
+
+#info-bar div p:last-child span {
+    font-family: "Poppins", "Poppins Placeholder", sans-serif;
+    font-size: 22px;
+    font-weight: 300;
+    line-height: 1.2;
+    color: rgb(95, 98, 100);
+}
+
+
+
+#info-bar button {
+    border: solid #6754e2;
+    border-width:  0 3px 5px 3px;
+    background-color: #252728;
+    border-radius: 50%;
+    box-shadow: 7px 7px 50px #5c5c5c40;
+    cursor: grab;
+    display: flex;
+    flex: none;
+    padding: 20px 15px;
+}
+
+#info-bar button img {
+    width: 40px;
+    padding-left: 7px;
+}
+
+#info-bar button:hover {
+    scale: 1.3;
+}
+
+.headp {
+    animation: leftslide 0.5s linear forwards;
+    animation-timeline: view();
+    animation-range: 0 50%;
+}
+
+@keyframes leftslide {
+    from {
+    opacity: 0;
+    transform: translateX(-100px);
+    }
+    to {
+    opacity: 1;
+    transform: translateY(0);
+    }
+}
+
+.parap span {
+    animation: animate 800ms linear 1 forwards;
+    animation-delay: calc(0.1s * var(--i));
+    filter: blur(20px);
+}
+
+
+
+
+@keyframes animate {
+    100% {
+    filter: blur(0);
+    }
+}
+
+.play {
+    animation: slideIn 0.5s ease-out forwards;
+    animation-timeline: view();
+    animation-range: 0 50%;
+}
+
+@keyframes slideIn {
+    from {
+    opacity: 0;
+    transform: translateY(100px);
+    }
+    to {
+    opacity: 1;
+    transform: translateY(0);
+    }
+}
+
+.featuredp span, .brandp span {
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 69px;
+    font-weight: 700;
+    color: rgb(37, 39, 40);
+    animation: animate linear 0.5s forwards;
+    animation-timeline: view();
+    animation-range: 0 30%;
+    filter: blur(20px);
+}
+
+.featuredp, .brandp {
+    animation: leftslide 0.5s linear forwards;
+    animation-timeline: view();
+    animation-range: 0 30%;
+}
+
+#featured-section, #brand-section {
+    padding: 0 65px;
+}
+
+
+
+
+#featured, #brand {
+    padding: 40px 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 75px;
+}
+
+
+#featured > span, #brand > span {
+    display: flex;
+    gap: 20px;
+}
+
+#featured > span p, #brand > span p {
+    font-family: "Poppins";
+    font-size: 18px;
+    letter-spacing: 0.1em;
+    color: rgba(37, 39, 40, 1);
+}
+
+.p-cards {
+    display: flex;
+    padding: 40px 80px;
+    gap: 30px;
+}
+
+.p-cards img:first-child {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: 300ms;
+
+}
+
+.p-cards .card button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    padding: 0;
+    background-color: transparent;
+    opacity: 0;
+    transition: 300ms;
+}
+
+
+
+
+.p-cards .card button img {
+    width: 150px;
+}
+
+.p-cards img:hover {
+    scale: 1.1;
+}
+
+.p-cards .card div:first-child:hover button {
+    top: 35%;
+    left: 40%;
+    opacity: 1;
+}
+
+.p-cards .card div:last-child {
+    display: flex;
+    flex-direction: column;
+    padding: 0 30px;
+}
+
+
+.p-cards .card div > p:first-child {
+    padding: 20px 0;
+    border-bottom: 1px solid rgb(217, 217, 217);
+}
+
+.p-cards .card span {
+    padding: 20px 0 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.p-cards .card {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 0;
+    
+}
+
+#brand-section {
+    background: linear-gradient(180deg, #efefef 0%, rgba(239, 239, 239, 0) 100%);
+}
+
+.p-cards .card div:first-child {
+    overflow: clip;
+    max-height: 430px;
+    position: relative;
+
+}
+
+@keyframes my-animation {
+    to {
+    transform: translateX(-150%);
+    }
+}
+
+/* test */
+
+
+.scroller {
+    height: 600px;
+    display: grid;
+    align-items: center;
+}
+
+.scroller__inner {
+    padding-block: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.scroller[data-animated="true"] {
+    overflow: hidden;
+    mask-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 12.5%, rgb(0, 0, 0) 87.5%, rgba(0, 0, 0, 0) 100%);
+}
+
+.scroller[data-animated="true"] .scroller__inner {
+    width: max-content;
+    flex-wrap: nowrap;
+    animation: scroll 40s linear infinite;
+}
+
+
+@keyframes scroll {
+    to {
+    transform: translate(calc(-50% - 0.5rem));
+    }
+}
+
+
+body > .logos.scroller {
+    height: 212px;
+}
+
+
+.logos.scroller > .logos-scroller.scroller__inner {
+    gap: 100px;
+}
+
+.logos.scroller > .logos-scroller.scroller__inner > img  {
+    height: 68px;
+}
+
+.logos.scroller[data-animated="true"] .scroller__inner {
+    animation: scrolly 40s reverse linear infinite;
+}
+
+body > span {
+    text-align: center;
+    display: block;
+    font-family: "Space Grotesk";
+    font-size: 69px;
+    font-weight: 700;
+    color: rgba(37, 39, 40, 1);
+}
+
+@keyframes scrolly {
+    to {
+    transform: translate(calc(-50% - 50px));
+    }
+}
+
+/* test */
+
+#work-together {
+    padding-inline: 150px;
+    position: relative;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(239, 239, 239);
+}
+
+#work-together > div:first-child {
+    min-width: 250px;
+    width: 700px;
+    padding-bottom: 50px;
+    border-bottom: 1px solid  rgb(175, 175, 175);
+    font-family: "Space Grotesk";
+    font-size: 70px;
+    line-height: .81;
+    font-weight: 700;
+    color: rgba(37, 39, 40, 1);
+    text-align: center;
+}
+
+#work-together > div:last-of-type {
+    padding-top: 50px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
+}
+
+#work-together button {
+    background: #fff;
+    color: rgba(38, 40, 41, 1);
+    font-family: "Poppins", "Poppins Placeholder", sans-serif;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    height: min-content;
+}
+
+#work-together button:hover {
+    background: rgba(103, 84, 226, 1);
+    color: #fff;
+
+}
+
+#work-together button:last-child:hover {
+    scale: 1.1;
+    background: #fff;
+    color: rgba(38, 40, 41, 1);
+}
+
+.FA {
+    translate: -250px -150px;
+    position: absolute;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 74px;
+    padding-right: 37px;
+    rotate: -16deg;
+    transition: 300ms;
+
+}
+
+.FA:hover {
+    translate: -175px -150px;
+    scale: 0.9;
+}
+
+.FA p:first-child {
+    font-family: "Poppins";
+    font-size: 17.76px;
+    font-weight: 600;
+    color:  rgba(37, 39, 40, 1);
+}
+
+.FA p:last-child {
+    font-family: "Poppins";
+    font-size: 16.28px;
+    font-weight: 300;
+    color: rgba(95, 98, 100, 1);
+}
+
+
+.FA img {
+    width: 110px;
+}
+
+#work-together button:last-child {
+    padding: 0;
+    padding-left: 39px;
+    gap: 20px;
+    box-shadow: 0px 11.4px 31.57px 0px #0000001A;
+}
+
+
+
+#contacty {
+    display: grid;
+    padding: 20px;
+    border-radius: 50%;
+    border: 10px solid #fff;
+    box-shadow: 0px 11.4px 31.57px 0px #0000001A;
+    background-color: #6754e2;
+}
+
+#contacty svg {
+    width: 15px;
+    height: 15px;
+}
+
+#contacty svg path {
+    fill: #fff;
+}
+
+footer {
+    background-color: rgb(37, 39, 40);
+    padding: 80px 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 55px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+footer > span:first-child {
+    font-family: "Space Grotesk";
+    font-size: 25px;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 1);
+}
+
+footer > span:last-child {
+    font-family: "Poppins", "Poppins Placeholder", sans-serif;
+    font-weight: 300;
+    letter-spacing: 7px;
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.5);
+    text-transform: uppercase;
+}
+
+footer button {
+    background-color: #fff;
+    gap: 12px;
+    display: flex;
+    align-items: center;
+    padding: 14.2px 35.5px;
+    font-family: "Space Grotesk", "Space Grotesk Placeholder", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+footer button:hover { 
+    color: #fff;
+}
+
+
+footer button:hover svg path{ 
+    fill: #fff
+}
+
+
+
+
+
+footer div {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+
+#overlay {
+        background-color: #000c;
+        inset: 0;
+        position: fixed;
+        user-select: none;
+        z-index: 5;
+}
+
+#video {
+    left: 50%;
+    position: fixed;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 50vw;
+    z-index: 5;
+}
+
+#video video {
+    cursor: auto;
+    width: 100%; 
+    height: 100%; 
+    display: block; 
+    object-fit: fill; 
+    background-color: rgba(0, 0, 0, 0); 
+    object-position: 50% 50%;
+    z-index: 6;
+}
+
+
+#burg {
+    display: none;
+}
+
+#menu {
+    transition: transform 0.3s ease;
+    transform: translateX(200%);
+}
+
+
+@media screen and (max-width: 1419px) {
+
+    html, body {
+        overflow-x: hidden;
+    }
+
+    body {
+        position: relative;
+    }
+
+
+    #side {
+        display: none;
+    }
+
+    #burg {
+        display: flex;
+    }
+
+    #burg > button {
+        background: transparent;
+        padding: 15px 0px;
+        display: flex;
+        align-items: center;
+    }
+
+    #burg > button > img {
+        width: 40px;
+    }
+
+    .active {
+        transform: translateX(0) !important;
+    }
+
+    #menu {
+        background-color: #262829;
+        position: absolute;
+        padding: 50px 70px;
+        top: 10svh;
+        right: 5vw;
+    }
+
+    #menu > ul {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #menu button {
+        background: #fff;
+        color: #262829;
+    }
+
+    #menu button a {
+        color: inherit;
+    }
+
+    .slidey {
+        margin-left: 5vw;
+    }
+
+    .p-cards {
+        flex-direction: column;
+    }
+
+
+
+}
+
+@media screen and (max-width: 800px) {
+
+
+
+
+    .slidey img {
+        height: 65svh;
+    }
+
+    #slider {
+        align-items: end;
+        height: 89.8svh;
+        --fade-size: 5rem;
+    }
+
+    .sliding.scroller {
+        bottom: auto;
+        mask: linear-gradient(90deg, transparent, white 2%  );
+
+    }
+    .sliding p {
+        font-size: 150px;
+    }
+
+    .uiux {
+        width: 150px;
+        height: 150px;
+    }
+
+    .uiux span {
+        font-size: 24px;
+        line-height: 24px;
+    }
+
+    #info-bar div {
+        flex-wrap: wrap;
+        min-width: 310px;
+    }
+
+    #featured {
+        justify-content: center;
+    }
+
+    .p-cards .card img:first-child {
+        height: 250px;
+    }
+
+    .p-cards {
+        padding: 40px 30px;
+    }
+
+    .p-cards button {
+        display: none;
+    }
+
+    .p-cards .card div:last-child {
+        display: flex;
+        flex-direction: column;
+        padding: 0 15px;
+    }
+    
+    .p-cards .card p:first-child {
+        padding: 10px 0;
+    }
+    
+    .p-cards .card span {
+        padding-top: 10px;
+    }
+
+    .FA {
+        translate: 0;
+        margin: 0;
+        top: -5%;
+        left: 5%;
+    }
+
+    #featured-section, #brand-section {
+        padding: 0;
+    }
+}
